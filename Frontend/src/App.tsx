@@ -11,11 +11,11 @@ function App() {
   return (
     <>
       <header>
-        <TopBarMenu />
+        {/* <TopBarMenu /> */}
+        <IntroSection />
       </header>
 
       <main className="h-full">
-        <IntroSection />
         <Section title="Sobre o imóvel" subtitle="Uma casa iluminada, silenciosa e próxima da praia, ideal para famílias ou home office.">
           <QuickInfoPanel />
         </Section>

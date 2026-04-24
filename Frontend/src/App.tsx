@@ -16,21 +16,21 @@ function App() {
       </header>
 
       <main className="h-full">
-        <Section title="Sobre o imóvel" subtitle="Uma casa iluminada, silenciosa e próxima da praia, ideal para famílias ou home office.">
+        <Section title="About the property" subtitle="A bright, quiet house close to the beach, ideal for families or a home office.">
           <QuickInfoPanel />
         </Section>
-        <Section title="Localização" subtitle="A casa está localizada em um bairro tranquilo, a poucos minutos da praia e de áreas comerciais.">
+        <Section title="Location" subtitle="The property is located in a quiet neighborhood, just a few minutes from the beach and commercial areas.">
           <MapLoader />
         </Section>
-        <Section title="Owner" subtitle="Conheça o proprietário do imóvel e saiba mais sobre ele.">
+        <Section title="Owner" subtitle="Get to know the property owner and learn more about him.">
           <OwnerInfo />
         </Section>
 
-        <Section title="Depoimentos" subtitle="Veja o que outros hóspedes têm a dizer sobre a experiência de se hospedar na casa.">
+        <Section title="Testimonials" subtitle="See what other guests have to say about their experience staying at the property.">
           <CommentCarousel />
         </Section>
 
-        <Section title="Galeria de Fotos" subtitle="Explore as fotos do imóvel para ter uma ideia melhor do espaço e das comodidades oferecidas.">
+        <Section title="Gallery" subtitle="Explore the photos of the property to get a better idea of the space and the amenities offered.">
           <GalleryPhotos />
         </Section>
       </main>

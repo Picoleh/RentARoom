@@ -6,10 +6,10 @@ export default function TopBarMenuButton() {
       
         <div className="bg-black/30 p-8 rounded-xl text-center">
         <h1 className="text-white text-5xl font-bold">
-          Bem-vindo
+          Welcome
         </h1>
         <p className="text-white mt-4 text-xl">
-          Encontre o quarto ideal para sua estadia
+          Find the ideal room for your stay
         </p>
       </div>
     </section>

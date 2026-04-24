@@ -6,9 +6,9 @@ export default function OwnerInfo() {
         </div>
 
         <div>
-            <h2 className="text-2xl font-bold">João Silva</h2>
-            <p className="text-gray-400">Proprietário</p>
-            <p className="mt-2">João é um proprietário experiente, conhecido por sua hospitalidade e atenção aos detalhes. Ele tem uma paixão por oferecer uma estadia confortável e memorável para seus hóspedes.</p>
+            <h2 className="text-2xl font-bold">Axel Seifert</h2>
+            <p className="text-gray-400">Property Owner</p>
+            <p className="mt-2">Axel is an experienced owner, known for his hospitality and attention to detail. He has a passion for providing comfortable and memorable stays for his guests.</p>
         </div>
     </div>
   );

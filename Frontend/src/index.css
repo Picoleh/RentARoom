@@ -1,1 +1,40 @@
 @import "tailwindcss";
+
+:root{
+    --bg-light: theme(colors.white);
+    --bg-light-100: theme(colors.gray.100);
+    --bg-light-200: theme(colors.gray.200);
+    --bg-light-300: theme(colors.gray.300);
+    --bg-light-400: theme(colors.gray.400);
+    --bg-light-500: theme(colors.gray.500);
+    --bg-light-600: theme(colors.gray.600);
+
+    --bg-dark: theme(colors.gray.800);
+    --bg-dark-100: theme(colors.gray.700);
+    --bg-dark-200: theme(colors.gray.600);
+    --bg-dark-300: theme(colors.gray.500);
+    --bg-dark-400: theme(colors.gray.400);
+    --bg-dark-500: theme(colors.gray.300);
+    --bg-dark-600: theme(colors.gray.200);
+
+    --text-dark: theme(colors.gray.800);
+    --text-light: theme(colors.gray.100);
+    --text-gray: theme(colors.gray.500);
+
+    --primary-color-bright: theme(colors.teal.500);
+    --primary-color-bright-hover: theme(colors.teal.600);
+    --primary-color: theme(colors.teal.600);
+    --primary-color-hover: theme(colors.teal.700);
+    --primary-color-dark: theme(colors.teal.800);
+    --primary-color-dark-hover: var(--primary-color);
+
+    --success : #22c55e;
+    --success-hover : #16a34a;
+    --success-opacity : #22c55e74;
+    --error : #ef4444;
+    --error-hover : #dc2626;
+    --error-opacity : #ef444474;
+    --warning : #f59e0b;
+    --warning-hover : #d97706;
+    --warning-opacity : #f59e0b74;
+}

@@ -51,10 +51,10 @@ export default function CommentsCarousel() {
   }, []);
 
   return (
-    <section className="w-full bg-slate-50 py-16 px-4">
+    <section className="w-full bg-(--bg-light-100) p-4 rounded-lg">
       <div className="mx-auto max-w-4xl">
 
-        <div className="relative overflow-hidden rounded-3xl bg-white shadow-xl">
+        <div className="relative overflow-hidden rounded-3xl bg-(--bg-light) shadow-xl">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${current * 100}%)` }}
@@ -67,15 +67,15 @@ export default function CommentsCarousel() {
                   ))}
                 </div>
 
-                <p className="text-lg leading-8 text-slate-700">
+                <p className="text-lg leading-8 text-(--text-dark)">
                   “{comment.text}”
                 </p>
 
                 <div className="mt-8 border-t border-slate-100 pt-6">
-                  <h3 className="text-lg font-semibold text-slate-900">
+                  <h3 className="text-lg font-semibold text-(--text-dark)">
                     {comment.name}
                   </h3>
-                  <p className="text-sm text-slate-500">{comment.location}</p>
+                  <p className="text-sm text-(--text-gray)">{comment.location}</p>
                 </div>
               </div>
             ))}
@@ -83,16 +83,16 @@ export default function CommentsCarousel() {
 
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white p-3 shadow-md transition hover:scale-105"
+            className="absolute left-4 top-3/5 -translate-y-1/2 rounded-full bg-(--bg-light) p-3 shadow-md transition hover:scale-105"
           >
-            <FaChevronCircleLeft className="h-5 w-5 text-slate-700" />
+            <FaChevronCircleLeft className="h-5 w-5 text-(--text-dark)" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white p-3 shadow-md transition hover:scale-105"
+            className="absolute right-4 top-3/5 -translate-y-1/2 rounded-full bg-(--bg-light) p-3 shadow-md transition hover:scale-105"
           >
-            <FaChevronCircleRight className="h-5 w-5 text-slate-700" />
+            <FaChevronCircleRight className="h-5 w-5 text-(--text-dark)" />
           </button>
         </div>
 
@@ -102,7 +102,7 @@ export default function CommentsCarousel() {
               key={index}
               onClick={() => setCurrent(index)}
               className={`h-2.5 rounded-full transition-all ${
-                current === index ? "w-8 bg-slate-900" : "w-2.5 bg-slate-300"
+                current === index ? "w-8 bg-(--bg-dark)" : "w-2.5 bg-(--bg-light-300)"
               }`}
             />
           ))}

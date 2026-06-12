@@ -4,18 +4,17 @@ import IntroSection from "./Components/Menus/Intro/IntroSection"
 import OwnerInfo from "./Components/Menus/Owner/OwnerInfo"
 import QuickInfoPanel from "./Components/Menus/QuickInfo/QuickInfoPanel"
 import Section from "./Components/Menus/Section"
-import TopBarMenu from "./Components/Menus/TopBar/TopBarMenu"
 import MapLoader from "./Components/Util/MapLoader"
 
 function App() {
   return (
     <>
-      <header>
+      <header className="h-[40vh] w-full">
         {/* <TopBarMenu /> */}
         <IntroSection />
       </header>
 
-      <main className="h-full">
+      <main className="h-full w-full">
         <Section title="About the property" subtitle="A bright, quiet house close to the beach, ideal for families or a home office.">
           <QuickInfoPanel />
         </Section>

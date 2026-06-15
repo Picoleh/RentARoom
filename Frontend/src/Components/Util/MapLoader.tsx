@@ -10,14 +10,14 @@ const customIcon = new L.Icon({
 });
 
 export default function MapLoader() {
-  const position: [number, number] = [-23.55052, -46.633308]; // São Paulo
+  const position: [number, number] = [50.80156934250092, 11.573895384775291]; // São Paulo
 
   return (
-    <div className="w-full h-96">
+    <div className="w-full h-72">
       <MapContainer
         center={position}
         zoom={13}
-        className="w-full h-full rounded-2xl"
+        className="w-full h-full rounded-3xl"
       >
         <TileLayer
           attribution="&copy; OpenStreetMap contributors"

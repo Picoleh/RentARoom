@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoStar } from "react-icons/io5";
 
 type Comment = {
@@ -51,8 +51,8 @@ export default function CommentsCarousel() {
   }, []);
 
   return (
-    <section className="w-full bg-(--bg-light-100) p-4 rounded-lg">
-      <div className="mx-auto max-w-4xl">
+    <section className=" h-full bg-(--bg-light-100) rounded-3xl p-4">
+      <div className="w-full h-full">
 
         <div className="relative overflow-hidden rounded-3xl bg-(--bg-light) shadow-xl">
           <div
@@ -60,43 +60,44 @@ export default function CommentsCarousel() {
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
             {comments.map((comment) => (
-              <div key={comment.id} className="min-w-full p-8 md:p-12">
-                <div className="mb-6 flex gap-1">
-                  {Array.from({ length: comment.rating }).map((_, index) => (
-                    <IoStar key={index} className="h-5 w-5 fill-current text-yellow-400" />
-                  ))}
+              <div key={comment.id} className="w-full shrink-0 p-4 px-12">
+                <div className="flex flex-col lg:flex-row items-start justify-start gap-2 lg:gap-8 border-b border-(--bg-light-300) pb-4 mb-4">
+                  <div className="flex flex-col">
+                    <h3 className="text-lg font-semibold text-(--text-dark)">
+                      {comment.name}
+                    </h3>
+                    <p className="text-sm text-(--text-gray)">{comment.location}</p>
+                  </div>
+                  <div className="flex flex-row gap-1">
+                    {Array.from({ length: comment.rating }).map((_, index) => (
+                      <IoStar key={index} className="h-5 w-5 fill-current text-yellow-400" />
+                    ))}
+                  </div>
                 </div>
 
-                <p className="text-lg leading-8 text-(--text-dark)">
+                <p className="text-lg leading-8 text-(--text-dark) wrap-break-word">
                   “{comment.text}”
                 </p>
-
-                <div className="mt-8 border-t border-slate-100 pt-6">
-                  <h3 className="text-lg font-semibold text-(--text-dark)">
-                    {comment.name}
-                  </h3>
-                  <p className="text-sm text-(--text-gray)">{comment.location}</p>
-                </div>
               </div>
             ))}
           </div>
 
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-3/5 -translate-y-1/2 rounded-full bg-(--bg-light) p-3 shadow-md transition hover:scale-105"
+            className="absolute left-1 top-1/2 -translate-y-1/2 rounded-full bg-(--bg-light) p-2 border-2 border-(--bg-dark-100) shadow-md transition hover:scale-105"
           >
-            <FaChevronCircleLeft className="h-5 w-5 text-(--text-dark)" />
+            <FaChevronLeft className="h-4 w-4 text-(--text-dark-100)" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-3/5 -translate-y-1/2 rounded-full bg-(--bg-light) p-3 shadow-md transition hover:scale-105"
+            className="absolute right-1 top-1/2 -translate-y-1/2 rounded-full bg-(--bg-light) p-2 border-2 border-(--bg-dark-100) shadow-md transition hover:scale-105"
           >
-            <FaChevronCircleRight className="h-5 w-5 text-(--text-dark)" />
+            <FaChevronRight className="h-4 w-4 text-(--text-dark-100)" />
           </button>
         </div>
 
-        <div className="mt-6 flex justify-center gap-2">
+        <div className="mt-4 flex justify-center gap-2">
           {comments.map((_, index) => (
             <button
               key={index}

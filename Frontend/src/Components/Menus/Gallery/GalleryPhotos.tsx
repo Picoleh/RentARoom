@@ -8,13 +8,39 @@ const photos = [
 
 export default function GalleryPhotos() {
     return (
-        <div className="grid grid-cols-5 bg-amber-100 h-full gap-4">
-            <div className="col-span-3 min-h-0">
-                <img src={photos[0]} alt="Foto 1" className="w-full h-full object-cover rounded-lg" />
+        <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-full rounded-3xl overflow-hidden">
+            {/* Principal */}
+            <div className="md:col-span-2 md:row-span-2">
+                <img src={photos[0]} alt="Foto principal" className="w-full h-full object-cover"/>
             </div>
-            <div className="col-span-2 min-h-0">
-                <img src={photos[0]} alt="Foto 2" className="w-full h-full object-cover rounded-lg mb-4" />
+
+            {/* Direita topo */}
+            <div>
+                <img src={photos[1]} alt="Foto 2" className="w-full h-full object-cover"/>
             </div>
+
+            <div>
+                <img src={photos[2]} alt="Foto 3" className="w-full h-full object-cover"/>
+            </div>
+
+            {/* Direita baixo */}
+            <div>
+                <img src={photos[3]} alt="Foto 4" className="w-full h-full object-cover"/>
+            </div>
+
+            <div className="relative">
+                <img src={photos[4]} alt="Foto 5" className="w-full h-full object-cover"/>
+
+                {/* opcional */}
+                {photos.length > 5 && (
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                    <span className="text-white font-semibold">
+                    +{photos.length - 5} fotos
+                    </span>
+                </div>
+                )}
+            </div>
+
         </div>
     );
 }

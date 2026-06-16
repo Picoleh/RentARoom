@@ -21,11 +21,11 @@
     --text-light: theme(colors.gray.100);
     --text-gray: theme(colors.gray.500);
 
-    --primary-color-bright: theme(colors.teal.500);
-    --primary-color-bright-hover: theme(colors.teal.600);
-    --primary-color: theme(colors.teal.600);
-    --primary-color-hover: theme(colors.teal.700);
-    --primary-color-dark: theme(colors.teal.800);
+    --primary-color-bright: theme(colors.orange.300);
+    --primary-color-bright-hover: theme(colors.orange.400);
+    --primary-color: theme(colors.orange.500);
+    --primary-color-hover: theme(colors.orange.700);
+    --primary-color-dark: theme(colors.orange.800);
     --primary-color-dark-hover: var(--primary-color);
 
     --success : #22c55e;

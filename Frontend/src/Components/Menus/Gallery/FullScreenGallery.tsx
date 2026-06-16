@@ -1,11 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 
 export default function FullScreenGallery({onClose, photos, openOn}: {onClose: () => void; photos: string[]; openOn: number}) {
     const [currentIndex, setCurrentIndex] = useState(openOn);
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                onClose();
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [onClose]);
+
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, []);
+
     return (
-        <div className="fixed inset-0 bg-black/90 z-50" onClick={onClose}>
+        <div className="fixed inset-0 bg-black/90 z-1000" onClick={onClose}>
             <div className="h-full w-full flex flex-col items-center justify-between">
                 <div className="bg-gray-800/80 p-4 px-8 w-full flex flex-row justify-between items-center text-white" onClick={(e) => e.stopPropagation()}>
                     <h2 className="text-2xl">Casa</h2>

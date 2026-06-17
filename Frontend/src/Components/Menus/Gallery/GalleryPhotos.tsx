@@ -14,26 +14,26 @@ export default function GalleryPhotos() {
     const [openOn, setOpenOn] = useState(0);
     const photoLimit = 5;
     return (
-        <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-full rounded-3xl overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-2 h-full rounded-3xl overflow-hidden">
             {isOpen && <FullScreenGallery onClose={() => setIsOpen(false)} photos={photos} openOn={openOn}/>}
             {/* Principal */}
             <div className="md:col-span-2 md:row-span-2" onClick={() => {
                 setIsOpen(true);
                 setOpenOn(0);
             }}>
-                <img src={photos[0]} alt="Foto principal" className="w-full h-full object-cover"/>
+                <img src={photos[0]} alt="Foto principal" className="w-full h-full object-cover hover:opacity-75 cursor-pointer"/>
             </div>
 
             {/* Direita topo */}
             <div>
-                <img src={photos[1]} alt="Foto 2" className="w-full h-full object-cover" onClick={() => {
+                <img src={photos[1]} alt="Foto 2" className="w-full h-full object-cover hover:opacity-75 cursor-pointer" onClick={() => {
                     setIsOpen(true);
                     setOpenOn(1);
                 }}/>
             </div>
 
             <div>
-                <img src={photos[2]} alt="Foto 3" className="w-full h-full object-cover" onClick={() => {
+                <img src={photos[2]} alt="Foto 3" className="w-full h-full object-cover hover:opacity-75 cursor-pointer" onClick={() => {
                     setIsOpen(true);
                     setOpenOn(2);
                 }}/>
@@ -41,14 +41,14 @@ export default function GalleryPhotos() {
 
             {/* Direita baixo */}
             <div>
-                <img src={photos[3]} alt="Foto 4" className="w-full h-full object-cover" onClick={() => {
+                <img src={photos[3]} alt="Foto 4" className="w-full h-full object-cover hover:opacity-75 cursor-pointer" onClick={() => {
                     setIsOpen(true);
                     setOpenOn(3);
                 }}/>
             </div>
 
             <div className="relative">
-                <img src={photos[4]} alt="Foto 5" className="w-full h-full object-cover" onClick={() => {
+                <img src={photos[4]} alt="Foto 5" className="w-full h-full object-cover hover:opacity-75 cursor-pointer" onClick={() => {
                     setIsOpen(true);
                     setOpenOn(4);
                 }}/>

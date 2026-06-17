@@ -1,4 +1,5 @@
 import CommentCarousel from "./Components/Menus/Comentary/CommentCarousel"
+import CTACard from "./Components/Menus/CTACard"
 import GalleryPhotos from "./Components/Menus/Gallery/GalleryPhotos"
 import IntroSection from "./Components/Menus/Intro/IntroSection"
 import OwnerInfo from "./Components/Menus/Owner/OwnerInfo"
@@ -36,6 +37,8 @@ function App() {
         <Section title="Gallery" subtitle="Explore the photos of the property to get a better idea of the space and the amenities offered.">
           <GalleryPhotos />
         </Section>
+
+        <CTACard />
       </main>
     </>
   )

@@ -42,7 +42,8 @@ export default function FullScreenGallery({ onClose, photos, openOn }: { onClose
                 </div>
 
                 <div className="flex flex-row items-center justify-center w-full p-4 lg:px-8">
-                    <img src={photos[currentIndex].path} alt={photos[currentIndex].alt} className="relative max-w-full max-h-full object-contain" onClick={(e) => e.stopPropagation()} />
+                    <img src={photos[currentIndex].path} alt={photos[currentIndex].alt} className="relative max-w-full max-h-[80vh] object-contain" onClick={(e) => e.stopPropagation()} />
+                    
                     <button className="absolute left-4 text-white bg-gray-600 rounded-full p-2 flex justify-center items-center 
                      hover:bg-white/70 hover:scale-105 cursor-pointer"
                         onClick={(e) => {

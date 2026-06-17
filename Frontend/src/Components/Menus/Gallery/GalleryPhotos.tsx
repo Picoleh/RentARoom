@@ -32,6 +32,11 @@ const photos: Photo[] = [
     path: "https://arcadium3d.com/storage/lp/90/Small-Bedroom-Layouts-That-Actually-Fit-Arcadium-3D.jpg",
     alt: "Bedroom #2",
     title: "Bedroom #2"
+  },
+  {
+    path: "/blackHole.jpeg",
+    alt: "Black Hole",
+    title: "Black Hole"
   }
 ];
 
